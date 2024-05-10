@@ -56,7 +56,7 @@
 	<div class="container">
 	    <img src="https://cdn-icons-png.freepik.com/512/10870/10870645.png" alt="Logo">
 	    <h2>Profile</h2>
-	    <form action="mainpage.html" method="post">
+	    <form action="LoginForm" method="post">
 	        <label for="username">Username</label>
 	        <input type="text" id="username" name="username" required>
 
@@ -67,5 +67,11 @@
 	    </form>
 	</div>
 
+    <script>
+            document.getElementById("loginForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                window.location.href = "mainpage.html";
+        });
+    </script>
 </body>
 </html>
