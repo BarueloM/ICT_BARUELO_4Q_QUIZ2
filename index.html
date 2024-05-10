@@ -56,7 +56,7 @@
 	<div class="container">
 	    <img src="https://cdn-icons-png.freepik.com/512/10870/10870645.png" alt="Logo">
 	    <h2>Profile</h2>
-	    <form action="LoginForm" method="post">
+	    <form action="LoginForm" class="form" onsubmit"return ValidateForm()">
 	        <label for="username">Username</label>
 	        <input type="text" id="username" name="username" required>
 
@@ -68,10 +68,20 @@
 	</div>
 
     <script>
+	function ValidateForm() {
+		var emailInput = document.getElementbyId("LoadUser");
+		var emailError = document.getElementbyId("UserError");
+
+		if (!userInput.checkvalidality()) {
+			userError.style.display = "block";
+			return false;
+		} else {
             document.getElementById("loginForm").addEventListener("submit", function(event) {
                 event.preventDefault();
                 window.location.href = "mainpage.html";
-        });
+		return false;
+	    }
+	}
     </script>
 </body>
 </html>
